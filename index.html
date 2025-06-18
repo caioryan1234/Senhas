@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <style>
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        #senhaGerada {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="gerarSenha">Gerar Senha</button>
+    <div id="senhaGerada"></div>
+
+    <script>
+        document.getElementById('gerarSenha').addEventListener('click', function() {
+            let senha = Math.random().toString(36).slice(-8);
+            document.getElementById('senhaGerada').innerText = 'Senha gerada: ' + senha;
+        });
+    </script>
+
+</body>
+</html>

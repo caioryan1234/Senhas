@@ -1,0 +1,21 @@
+/* Estilos para o botão */
+button {
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaciamento interno do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+button:hover {
+    background-color: #45a049; /* Cor de fundo quando o mouse passa por cima */
+}
+
+/* Estilo para o texto da senha gerada */
+#senhaGerada {
+    margin-top: 20px; /* Espaçamento superior */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixar o texto em negrito */
+}
