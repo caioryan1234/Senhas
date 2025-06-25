@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gerador de Senhas</title>
     <style>
+        /* Estilo do botão */
         button {
             background-color: #4CAF50;
             color: white;
@@ -18,25 +19,76 @@
         button:hover {
             background-color: #45a049;
         }
-        
+
+        /* Estilo do texto da senha gerada */
         #senhaGerada {
             margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
         }
+
+        /* Estilo da imagem */
+        #imagemTopo {
+            display: block;
+            margin: 20px auto 0 auto;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+
+        /* Estilo do iframe do Figma */
+        #figmaIframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        /* Estilo do link para o Figma */
+        #linkFigma {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        #linkFigma:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Imagem no topo da página -->
+    <img id="imagemTopo" src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Ícone de senha segura" />
+
+    <!-- Botão para gerar a senha -->
     <button id="gerarSenha">Gerar Senha</button>
+    
+    <!-- Div para exibir a senha gerada -->
     <div id="senhaGerada"></div>
 
+    <!-- Figma iframe -->
+    <iframe 
+        id="figmaIframe" 
+        src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/glWoq5BsdEbGR1pYkS0M5z/JavaScript--senhas-seguras-com-matem%C3%A1tica-e-programa%C3%A7%C3%A3o--Community-?node-id=206-259&t=aZFbzn2S1o2IXaE2-4" 
+        allowfullscreen>
+    </iframe>
+
+    <!-- Link para acessar diretamente o design no Figma -->
+    <a id="linkFigma" href="https://www.figma.com/design/glWoq5BsdEbGR1pYkS0M5z/JavaScript--senhas-seguras-com-matem%C3%A1tica-e-programa%C3%A7%C3%A3o--Community-?node-id=206-259&t=aZFbzn2S1o2IXaE2-4" target="_blank">
+        Veja o design no Figma
+    </a>
+
     <script>
+        // Função para gerar a senha
         document.getElementById('gerarSenha').addEventListener('click', function() {
-            let senha = Math.random().toString(36).slice(-8);
+            let senha = Math.random().toString(36).slice(-8); // Gera uma senha aleatória de 8 caracteres
             document.getElementById('senhaGerada').innerText = 'Senha gerada: ' + senha;
         });
     </script>
 
 </body>
 </html>
+
